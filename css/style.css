@@ -3,3 +3,100 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    color: #fff;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.carousel-box {
+    width: 75%;
+    height: 75vh;
+}
+
+
+.card-box {
+    width: 100%;
+    height: 80%;
+    display: none;
+    position: relative;
+}
+
+
+.card-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card-info {
+    position: absolute;
+    text-align: right;
+    top: 65px;
+    right: 30px;
+}
+
+
+
+.active {
+    display: block;
+}
+
+
+.thumbnails {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    border: 1px solid red;
+}
+
+
+.thumbnails-box {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+
+.thumbnails-img {
+    width: calc(100% / 5);
+    height: auto;
+}
+
+
+.thumbnails-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.thumb-active {
+    border: 2px solid whitesmoke;
+}
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 0 20px;
+}
