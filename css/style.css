@@ -28,8 +28,11 @@ body {
 .card-box {
     width: 100%;
     height: 80%;
+    border-radius: 15px;
+    overflow: hidden;
     display: none;
     position: relative;
+    box-shadow: 2px 1px 16px 1px rgba(0, 0, 0, 0.72);
 }
 
 
@@ -58,8 +61,11 @@ body {
 .thumbnails {
     width: 100%;
     height: 20%;
+    margin-top: 12px;
     position: relative;
-    border: 1px solid red;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0 4px;
 }
 
 
@@ -82,11 +88,14 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    cursor: pointer;
 }
 
 
 .thumb-active {
-    border: 2px solid whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 
@@ -96,7 +105,14 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    position: absolute;
     top: 0;
     padding: 0 20px;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+.buttons button {
+    pointer-events: all;
+    cursor: pointer;
 }

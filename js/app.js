@@ -95,6 +95,7 @@ function beforeCard() {
 
 function change(index) {
     allCard[index].classList.add('active');
+    thumbnailsActive();
 }
 
 
@@ -109,16 +110,40 @@ function generateThumbnails() {
 }
 
 
-setInterval(nextCard, 3000);
+// setInterval(nextCard, 3000);
+
+
+function getThumbnails(o) {
+    allCard[i].classList.remove('active');
+    i = o;
+    allCard[i].classList.add('active');
+    thumbnailsActive();
+}
+
+function thumbnailsActive() {
+    allThumbnails[i].classList.add('thumb-active');
+}
+
 
 
 
 generateCarouselCards();
 generateThumbnails();
 allCard[0].classList.add('active');
+allThumbnails[0].classList.add('thumb-active')
 btnBefore.addEventListener('click', beforeCard);
 btnNext.addEventListener('click', nextCard);
 
+for (let o in allThumbnails) {
+    allThumbnails[o].addEventListener('click', () => {
+        if (!allThumbnails[o].classList.contains('thumb-active')) {
+            allThumbnails[i].classList.remove('thumb-active');
+        }
+        getThumbnails(o);
+    });
+}
+
+console.log(allThumbnails);
 
 
 
