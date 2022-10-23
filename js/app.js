@@ -8,7 +8,6 @@ const allCard = [];
 const allThumbnails = [];
 let i = 0;
 
-console.log(carouselBox, btnBefore, btnNext);
 
 const images = [
     {
@@ -72,6 +71,8 @@ function nextCard() {
         allCard[i].classList.remove('active');
     }
 
+    resetThumbnailsactive();
+
     if (i == 4) {
         i = -1;
     }
@@ -85,6 +86,8 @@ function beforeCard() {
     if (allCard[i].classList.contains('active')) {
         allCard[i].classList.remove('active');
     }
+
+    resetThumbnailsactive();
 
     if (i == 0) {
         i = 5;
@@ -110,7 +113,7 @@ function generateThumbnails() {
 }
 
 
-// setInterval(nextCard, 3000);
+setInterval(nextCard, 3000);
 
 
 function getThumbnails(o) {
@@ -123,6 +126,18 @@ function getThumbnails(o) {
 function thumbnailsActive() {
     allThumbnails[i].classList.add('thumb-active');
 }
+
+
+function resetThumbnailsactive() {
+    for (let o in allThumbnails) {
+        if (!allThumbnails[o].classList.contains('thumb-active')) {
+            allThumbnails[i].classList.remove('thumb-active');
+        }
+    }
+}
+
+
+
 
 
 
@@ -143,7 +158,6 @@ for (let o in allThumbnails) {
     });
 }
 
-console.log(allThumbnails);
 
 
 

@@ -8,6 +8,15 @@ body {
     color: #fff;
 }
 
+i {
+    color: #fff;
+    font-size: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
 
 .container {
     width: 100%;
@@ -47,7 +56,7 @@ body {
 .card-info {
     position: absolute;
     text-align: right;
-    top: 65px;
+    top: 45px;
     right: 30px;
 }
 
@@ -65,7 +74,6 @@ body {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    padding: 0 4px;
 }
 
 
@@ -94,7 +102,7 @@ body {
 
 .thumb-active {
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -104,15 +112,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    top: 0;
-    padding: 0 20px;
+    top: 50%;
+    transform: translateY(-50%);
     position: absolute;
     pointer-events: none;
+    padding: 0 20px;
 }
 
 
 .buttons button {
     pointer-events: all;
     cursor: pointer;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.7;
 }
