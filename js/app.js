@@ -4,6 +4,8 @@ const carouselBox = document.getElementById('primary-cont');
 const thumbnails = document.getElementById('thumbnails-cont');
 const btnBefore = document.getElementById('before');
 const btnNext = document.getElementById('next');
+const btnStop = document.getElementById('stop');
+const btnReverse = document.getElementById('reverse');
 const allCard = [];
 const allThumbnails = [];
 let i = 0;
@@ -113,7 +115,7 @@ function generateThumbnails() {
 }
 
 
-setInterval(nextCard, 3000);
+const myInterval = setInterval(nextCard, 3000);
 
 
 function getThumbnails(o) {
@@ -138,6 +140,16 @@ function resetThumbnailsactive() {
 
 
 
+function removeInterval() {
+    clearInterval(myInterval);
+}
+
+
+// function reverseArray() {
+// }
+
+
+
 
 
 
@@ -157,6 +169,11 @@ for (let o in allThumbnails) {
         getThumbnails(o);
     });
 }
+
+
+
+btnStop.addEventListener('click', removeInterval);
+// btnReverse.addEventListener('click', reverseArray);
 
 
 
